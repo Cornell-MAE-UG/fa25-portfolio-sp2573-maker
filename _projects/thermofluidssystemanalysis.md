@@ -55,11 +55,19 @@ Power of shaft = hat transfer through walls of engine + mass flow rate(enthalpy 
 
 For a piston engine cylinder operating in steady periodic cycles, the thermal efficiency can be written in the simplest form as:
 
-\[
-\eta_{th} = \frac{W_{\text{shaft}}}{Q_{\text{in}}}
-\]
+efficiencey = work done by shaft / heat in
 
-**Where:**
+## 🔧 Design Change  
+Increase the **compression ratio** (how much the engine squeezes the air–fuel mixture).
 
-* **\( W_{\text{shaft}} \)** — useful shaft work produced by the piston during one cycle  
-* **\( Q_{\text{in}} \)** — heat added from combustion (fuel chemical energy per cycle)
+* Baseline engine: **8:1 compression**
+* New design: **11:1 compression**
+
+This is done by reducing the clearance volume at top dead center (changing piston/head shape).
+
+This is because:
+
+the efficiency basically follows:
+
+efficiency = 1 - [1/(compression ration)^(k-1)]
+with k=1.4 for air.
