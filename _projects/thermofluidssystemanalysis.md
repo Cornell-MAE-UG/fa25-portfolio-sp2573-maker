@@ -57,11 +57,11 @@ For a piston engine cylinder operating in steady periodic cycles, the thermal ef
 
 efficiencey = work done by shaft / heat in
 
-## 🔧 Design Change  
-Increase the **compression ratio** (how much the engine squeezes the air–fuel mixture).
+## Design Change  
+Increase the compression ratio (how much the engine squeezes the air–fuel mixture).
 
-* Baseline engine: **8:1 compression**
-* New design: **11:1 compression**
+* Baseline engine: 8:1 compression
+* New design: 11:1 compression
 
 This is done by reducing the clearance volume at top dead center (changing piston/head shape).
 
