@@ -44,3 +44,52 @@ Since air is assumed to behave as an ideal gas, the work and heat transfer for e
 
 ![First Two Steps]({{ "/assets/images/FirstTwoSteps.jpeg" | relative_url }}){: style="width: 500px"}
 ![Last Two Steps]({{ "/assets/images/LastTwoSteps.jpeg" | relative_url }}){: style="width: 500px"}
+
+## Mass Balance
+
+### General control-volume form
+dm_CV/dt = Σ ṁ_in − Σ ṁ_out
+
+### For a piston engine
+- Over a full cycle, the engine returns to its initial state
+- Therefore, **no net mass accumulation**
+
+Σ ṁ_in = Σ ṁ_out
+
+---
+
+## Energy Balance (First Law of Thermodynamics)
+
+### General control-volume form
+dE_CV/dt = Σ Q̇ − Σ Ẇ  
+     + Σ ṁ_in (h + V²/2 + gz)_in  
+     − Σ ṁ_out (h + V²/2 + gz)_out
+
+### For a piston engine (simplifications)
+- Changes in kinetic and potential energy are negligible
+- Over a cycle:
+
+dE_CV/dt = 0
+
+Σ Q̇ − Σ Ẇ + Σ ṁ_in h_in − Σ ṁ_out h_out = 0
+
+- This balance governs **engine efficiency and power output**
+
+---
+
+## Entropy Balance (Second Law of Thermodynamics)
+
+### General control-volume form
+dS_CV/dt = Σ (Q̇_k / T_k)  
+     + Σ ṁ_in s_in  
+     − Σ ṁ_out s_out  
+     + S_gen
+
+- **Note:** S_gen ≥ 0
+
+### For a piston engine (steady cyclic operation)
+Σ (Q̇_k / T_k) + Σ ṁ_in s_in − Σ ṁ_out s_out + S_gen = 0
+
+- The entropy balance quantifies **irreversibility and efficiency limits**
+
+We did this project in a group and the people in my group were Teddy Rauchway and Panashe Neghna.
