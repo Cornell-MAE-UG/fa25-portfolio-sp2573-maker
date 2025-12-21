@@ -92,4 +92,12 @@ dS_CV/dt = Σ (Q̇_k / T_k)
 
 - The entropy balance quantifies **irreversibility and efficiency limits**
 
+## Design or Operating Condition Improvement
+
+One potential improvement to the piston–cylinder engine is increasing the *compression ratio* of the Otto cycle. This change can be achieved through a design modification that reduces the clearance volume at top dead center while keeping the displacement volume fixed.
+
+Increasing the compression ratio raises the temperature and pressure at the end of the isentropic compression process (state 2). As a result, for the same amount of heat added during the constant-volume heat addition process, a greater fraction of the input heat is converted into useful work during the expansion process. From a thermodynamic standpoint, this leads to an increase in the *thermal efficiency* of the cycle, as predicted by the ideal Otto cycle efficiency relation.
+
+However, higher compression ratios also increase peak cylinder temperatures and pressures, which can introduce practical limitations such as material stress, heat transfer losses, and the risk of engine knock in real engines. Therefore, while increasing the compression ratio improves ideal cycle performance, it must be balanced against mechanical and thermal constraints in real system design.
+
 We did this project in a group and the people in my group were Teddy Rauchway and Panashe Neghna.
