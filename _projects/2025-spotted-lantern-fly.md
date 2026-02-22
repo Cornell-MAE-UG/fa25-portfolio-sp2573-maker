@@ -1,103 +1,98 @@
 ---
-layout: project
-title: Thermodynamic Analysis of a Piston Engine
-description: Thermodynamic Analysis of the Engine
-technologies: [Autodesk Fusion 360]
-image: /assets/images/car-engine-CAD.png
+fontsize: 11pt
+geometry: margin=1in
+papersize: letter
+pagestyle: empty
+header-includes:
+  - \pagenumbering{gobble}
+  - \usepackage{titlesec}
+  - \titlespacing*{\section}{0pt}{0.6ex}{0.8ex}
+  - \titlespacing*{\subsection}{0pt}{0.4ex}{0.6ex}
+  - \setlength{\parskip}{0pt}
+  - \setlength{\parindent}{0pt}
+  - \renewcommand{\baselinestretch}{0.95}
+  - \raggedbottom
 ---
 
-In November 2025, as part of a homework for a thermodynamics class I had to analyze a real thermodynamic system and consider ways to improve it.
-
-<br>
-<br>
-<br>
 
 
-### The Model of the Engine
 
-A piston-cylinder engine is a mechanical system that converts energy from a working fluid into reciprocating motion. It consists of a cylindrical chamber in which the piston moves back and forth (up and down) as pressure within the cylinder changes. In this analysis, the engine is modelled as an **Otto Cycle**, which consists of the following steps:
+# HertzTrap: Frequency-Based Spotted Lanternfly Deterrent
 
-- **1 → 2:** Isentropic compression  
-- **2 → 3:** Constant-volume heat addition  
-- **3 → 4:** Isentropic expansion  
-- **4 → 1:** Constant-volume heat rejection  
 
-In this ideal case, all processes are assumed to be internally reversible, and there is no heat transfer between the system and the surroundings.
+**Team:** Newton's Nightmares  
+**Client(s):** Cornell CALS Extension / E\&J Gallo Winery / National Grape
 
-### The P-v Diagram
 
-![P-v Diagram]({{ "/assets/images/Pv_diagram.jpeg" | relative_url }}){: style="width: 500px"}
+## Problem statement
 
-### The T-s Diagram
 
-![T-s Diagram]({{ "/assets/images/Ts_diagram.jpeg" | relative_url }}){: style="width: 500px"}
+Farmers in vineyards are trying to continue growth and production of their vineyards. However, the growing population of Spotted Lanternflies (SLFs) puts significant pressure on farmers as these insects feed off grapevines, lowering yield and significantly damaging or killing the plants. The SLF is an exceptionally harmful pest because there are no natural predators and regular pest control does not work effectively. When harvesting, if more than 2 SLFs are found in a 1 kg sample of harvest, the entire section must be discarded per health code—a devastating loss for farmers already running on thin margins. Our team is aiming to take advantage of the SLF's documented attraction to 60 Hz frequencies and create a product that draws SLFs away from grapevines.
 
-### Work and Heat for Each Process
 
-![Work and Heat Eqs]({{ "/assets/images/QandW_Transfer.jpeg" | relative_url }}){: style="width: 500px"}
+## Impact
 
-The net work of the cycle is obtained by subtracting the work input during process **1 → 2** from the work output during process **3 → 4**. The net work can also be evaluated as the net heat added, which is found by subtracting the heat rejected during process **4 → 1** from the heat added during process **2 → 3**. Therefore, the area enclosed by both the **p–v diagram** and the **T–s diagram** represents the net work output of the ideal **Otto Cycle**.
 
-Since air is assumed to behave as an ideal gas, the work and heat transfer for each process can be expressed in terms of the specific heat at constant volume. The work done or heat transferred during a process from state a → b is given by the specific heat at constant volume multiplied by the temperature difference between the two states.
+SLF infestations prevent farms from passing health code inspections, forcing the discard of otherwise viable harvests. This directly threatens farm profitability and viability. A product that removes SLFs from grapevines before harvest can prevent yield loss, help farms meet health codes, and significantly increase both productivity and profit margins.
 
-### Control Mass Drawings for the System
 
-![First Two Steps]({{ "/assets/images/FirstTwoSteps.jpeg" | relative_url }}){: style="width: 500px"}
-![Last Two Steps]({{ "/assets/images/LastTwoSteps.jpeg" | relative_url }}){: style="width: 500px"}
+## Proposed direction(s)
 
-## Mass Balance
 
-### General control-volume form
-dm_CV/dt = Σ ṁ_in − Σ ṁ_out
+### Concept A: HertzTrap
 
-### For a piston engine
-- Over a full cycle, the engine returns to its initial state
-- Therefore, **no net mass accumulation**
 
-Σ ṁ_in = Σ ṁ_out
+**What it is:** A modified electric insect trap designed to attract adult SLFs using a 60 Hz vibrational stimulus, based on published observations of SLF responsiveness to specific frequency cues.
 
----
 
-## Energy Balance (First Law of Thermodynamics)
+**How it would be used:**
+- Traps are installed along vineyard perimeters or near vine canopies before harvest
+- Device emits 60 Hz stimulus to attract SLFs away from grape vines
+- SLFs fly into an electrified grid and are neutralized before entering vineyard
+- Device operates continuously during migration window
 
-### General control-volume form
-dE_CV/dt = Σ Q̇ − Σ Ẇ  
-     + Σ ṁ_in (h + V²/2 + gz)_in  
-     − Σ ṁ_out (h + V²/2 + gz)_out
 
-### For a piston engine (simplifications)
-- Changes in kinetic and potential energy are negligible
-- Over a cycle:
+**Why it's better than the status quo:**
+- Targets SLFs before they enter vineyards and have access to grapes
+- Avoids pesticide application and associated labor
+- Uses simple electrical components instead of a high-precision sorting system
 
-dE_CV/dt = 0
 
-Σ Q̇ − Σ Ẇ + Σ ṁ_in h_in − Σ ṁ_out h_out = 0
+**End-of-semester proof-of-concept:** We will develop a full CAD model with real-world dimensions and a scaled-down HertzTrap shell built to accurate proportions. The shell will include an internal slot and 60 Hz speaker, plus a PLA or ABS mesh outer layer to represent the electrically charged shock layer.
 
-- This balance governs **engine efficiency and power output**
 
----
+## Key risks / unknowns
 
-## Entropy Balance (Second Law of Thermodynamics)
 
-### General control-volume form
-dS_CV/dt = Σ (Q̇_k / T_k)  
-     + Σ ṁ_in s_in  
-     − Σ ṁ_out s_out  
-     + S_gen
+- **Attraction Strength:** SLFs may not respond strongly enough to 60 Hz cues in open vineyard environments. We will test this through outdoor trials to validate effectiveness.
+- **Nontarget Effects:** The trap may attract or harm beneficial insects. We will evaluate trap selectivity through observational testing.
+- **Environmental Durability:** Outdoor weather and dust may reduce performance. We will evaluate possible materials, durability, and placement strategies.
 
-- **Note:** S_gen ≥ 0
 
-### For a piston engine (steady cyclic operation)
-Σ (Q̇_k / T_k) + Σ ṁ_in s_in − Σ ṁ_out s_out + S_gen = 0
+## Questions
 
-- The entropy balance quantifies **irreversibility and efficiency limits**
 
-## Design or Operating Condition Improvement
+1. **What size trap would be most practical for your operations?** *Decision affected:* Sizing and the number of traps we recommend installing per acre.
+2. **Will disposing of dead flies be an issue for your farms?** *Decision affected:* Whether we need to design the trap to minimize aftereffects or provide disposal guidance.
+3. **Is harming non-SLF animals and pests of similar size/behavior a major environmental concern?** *Decision affected:* Whether we need to refine trap selectivity or if the current design approach is acceptable.
 
-One potential improvement to the piston–cylinder engine is increasing the *compression ratio* of the Otto cycle. This change can be achieved through a design modification that reduces the clearance volume at top dead center while keeping the displacement volume fixed.
 
-Increasing the compression ratio raises the temperature and pressure at the end of the isentropic compression process (state 2). As a result, for the same amount of heat added during the constant-volume heat addition process, a greater fraction of the input heat is converted into useful work during the expansion process. From a thermodynamic standpoint, this leads to an increase in the *thermal efficiency* of the cycle, as predicted by the ideal Otto cycle efficiency relation.
 
-However, higher compression ratios also increase peak cylinder temperatures and pressures, which can introduce practical limitations such as material stress, heat transfer losses, and the risk of engine knock in real engines. Therefore, while increasing the compression ratio improves ideal cycle performance, it must be balanced against mechanical and thermal constraints in real system design.
 
-We did this project in a group and the people in my group were Teddy Rauchway and Panashe Neghna.
+## References
+
+
+- Wine Market Value - https://www.grandviewresearch.com/industry-analysis/us-wine-market
+- Spotted Lanternfly Information - https://cals.cornell.edu/integrated-pest-management/outreach-education/whats-bugging-you/spotted-lanternfly/spotted-lanternfly-damage
+- 60 Hz Research - https://www.usda.gov/about-usda/news/blog/spotted-lanternfly-reveals-potential-weakness
+
+
+
+
+## Figure
+
+
+![HertzTrap schematic](assets/images/HertzTrap_Figure.png){ width=0.8\textwidth }
+
+
+
