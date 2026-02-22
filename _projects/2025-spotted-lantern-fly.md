@@ -14,9 +14,6 @@ header-includes:
   - \raggedbottom
 ---
 
-
-
-
 # HertzTrap: Frequency-Based Spotted Lanternfly Deterrent
 
 
