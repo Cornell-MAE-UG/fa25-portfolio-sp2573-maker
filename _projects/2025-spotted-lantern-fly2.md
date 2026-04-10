@@ -94,12 +94,13 @@ The prototype was assembled by placing the electrical components inside the uppe
 
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
 
-  <img src="/assets/images/Step1.png" style="width:100%;">
-  <img src="/assets/images/Step2.png" style="width:100%;">
-  <img src="/assets/images/Step3.png" style="width:100%;">
-  <img src="/assets/images/Step4.png" style="width:100%;">
-  <img src="/assets/images/Step5.png" style="width:100%;">
-  <img src="/assets/images/Step6.png" style="width:100%;">
+  <img src="{{ '/assets/images/Step1.png' | relative_url }}" style="width:100%;">
+  <img src="{{ '/assets/images/Step2.png' | relative_url }}" style="width:100%;">
+  <img src="{{ '/assets/images/Step3.png' | relative_url }}" style="width:100%;">
+
+  <img src="{{ '/assets/images/Step4.png' | relative_url }}" style="width:100%;">
+  <img src="{{ '/assets/images/Step5.png' | relative_url }}" style="width:100%;">
+  <img src="{{ '/assets/images/Step6.png' | relative_url }}" style="width:100%;">
 
 </div>
 
