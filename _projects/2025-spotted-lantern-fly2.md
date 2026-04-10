@@ -6,43 +6,88 @@ technologies: [Fusion 360, Arduino, Bambu]
 image: /assets/images/HertzTrap_Figure.png
 ---
 
+## Table of Contents
 
-In October 2025, as part of a homework assigment for a statics course, I had to design a lever arm mechanism to lift the highest possible weight and to raise it to the highest possible height. The 2D design space was 150cm long by 50cm high.
-<br>
-<br>
-<br>
-<br>
+- [Client Pitch](#client-pitch)
+- [Functional Prototype](#functional-prototype)
 
-### Choosing the Actuator     
+## Client Pitch {#client-pitch}
 
-I had to choose from a catalog of online actuators. Since I wanted to maximize the weight lifted, chose the actuator which could provide the greatest force output. I chose from the [Tolomatic Online Catalog](https://www.tolomatic.com/wp-content/uploads/2022/05/2700-4000_29_IMA_cat.pdf). I chose the RSX Electric Rod Style Actuator, which provided a really great force output of 294kN.
+# HertzTrap: Frequency-Based Spotted Lanternfly Deterrent
 
-### Mathematical Model
-![Pre Diagram of the Design]({{ "/assets/images/math_model_diagram.jpg" | relative_url }}){: style="width: 500px"}
 
-Let bar length be L, angle θ above horizontal, and load W at the tip.  
-The actuator attaches to the bar at distance a from the pivot, making angle α  
-relative to the bar (angle between actuator’s line of action and bar).
+**Team:** Newton's Nightmares  
+**Client(s):** Cornell CALS Extension / E\&J Gallo Winery / National Grape
 
-Doing an equilibrium anaylsis yields the following equations and relationships:
 
-![Mathematical Model of the Design]({{ "/assets/images/math_model.jpg" | relative_url }}){: style="width: 500px"}
+## Problem statement
 
-### Finalizing the Design
 
-To finalize:
+Farmers in vineyards are trying to continue growth and production of their vineyards. However, the growing population of Spotted Lanternflies (SLFs) puts significant pressure on farmers as these insects feed off grapevines, lowering yield and significantly damaging or killing the plants. The SLF is an exceptionally harmful pest because there are no natural predators and regular pest control does not work effectively. When harvesting, if more than 2 SLFs are found in a 1 kg sample of harvest, the entire section must be discarded per health code—a devastating loss for farmers already running on thin margins. Our team is aiming to take advantage of the SLF's documented attraction to 60 Hz frequencies and create a product that draws SLFs away from grapevines.
 
-* I decided that the max height lifted would be the height of the design space (so 50cm!).
-* The actuator would be at 90 degrees to the ground.
-* The max weight could be supported when the actuator was at 150cm from the start.
-    * The max weight was 294kN.
-    * This was equal to the force the actuator could provide.
 
-### Assuming the bar is not rigid
+## Impact
 
-![Mathematical Model of the Design]({{ "/assets/images/page1.jpeg" | relative_url }}){: style="width: 500px"}
-![Mathematical Model of the Design]({{ "/assets/images/page2.jpeg" | relative_url }}){: style="width: 500px"}
-![Mathematical Model of the Design]({{ "/assets/images/page3.jpeg" | relative_url }}){: style="width: 500px"}
-![Mathematical Model of the Design]({{ "/assets/images/page4.jpeg" | relative_url }}){: style="width: 500px"}
 
-![Finalized Design]({{ "/assets/images/finalized_design.jpeg" | relative_url }}){: style="width: 500px"}
+SLF infestations prevent farms from passing health code inspections, forcing the discard of otherwise viable harvests. This directly threatens farm profitability and viability. A product that removes SLFs from grapevines before harvest can prevent yield loss, help farms meet health codes, and significantly increase both productivity and profit margins.
+
+
+## Proposed direction(s)
+
+
+### Concept A: HertzTrap
+
+
+**What it is:** A modified electric insect trap designed to attract adult SLFs using a 60 Hz vibrational stimulus, based on published observations of SLF responsiveness to specific frequency cues.
+
+
+**How it would be used:**
+- Traps are installed along vineyard perimeters or near vine canopies before harvest
+- Device emits 60 Hz stimulus to attract SLFs away from grape vines
+- SLFs fly into an electrified grid and are neutralized before entering vineyard
+- Device operates continuously during migration window
+
+
+**Why it's better than the status quo:**
+- Targets SLFs before they enter vineyards and have access to grapes
+- Avoids pesticide application and associated labor
+- Uses simple electrical components instead of a high-precision sorting system
+
+
+**End-of-semester proof-of-concept:** We will develop a full CAD model with real-world dimensions and a scaled-down HertzTrap shell built to accurate proportions. The shell will include an internal slot and 60 Hz speaker, plus a PLA or ABS mesh outer layer to represent the electrically charged shock layer.
+
+
+## Key risks / unknowns
+
+
+- **Attraction Strength:** SLFs may not respond strongly enough to 60 Hz cues in open vineyard environments. We will test this through outdoor trials to validate effectiveness.
+- **Nontarget Effects:** The trap may attract or harm beneficial insects. We will evaluate trap selectivity through observational testing.
+- **Environmental Durability:** Outdoor weather and dust may reduce performance. We will evaluate possible materials, durability, and placement strategies.
+
+
+## Questions
+
+
+1. **What size trap would be most practical for your operations?** *Decision affected:* Sizing and the number of traps we recommend installing per acre.
+2. **Will disposing of dead flies be an issue for your farms?** *Decision affected:* Whether we need to design the trap to minimize aftereffects or provide disposal guidance.
+3. **Is harming non-SLF animals and pests of similar size/behavior a major environmental concern?** *Decision affected:* Whether we need to refine trap selectivity or if the current design approach is acceptable.
+
+
+
+
+## References
+
+
+- Wine Market Value - https://www.grandviewresearch.com/industry-analysis/us-wine-market
+- Spotted Lanternfly Information - https://cals.cornell.edu/integrated-pest-management/outreach-education/whats-bugging-you/spotted-lanternfly/spotted-lanternfly-damage
+- 60 Hz Research - https://www.usda.gov/about-usda/news/blog/spotted-lanternfly-reveals-potential-weakness
+
+
+
+
+## Figure
+
+
+![HertzTrap schematic](assets/images/HertzTrap_Figure.png){ width=0.8\textwidth }
+
+## Functional Prototype {#functional-prototype}
