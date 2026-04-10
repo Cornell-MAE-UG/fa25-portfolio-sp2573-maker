@@ -1,18 +1,17 @@
 ---
-fontsize: 11pt
-geometry: margin=1in
-papersize: letter
-pagestyle: empty
-header-includes:
-  - \pagenumbering{gobble}
-  - \usepackage{titlesec}
-  - \titlespacing*{\section}{0pt}{0.6ex}{0.8ex}
-  - \titlespacing*{\subsection}{0pt}{0.4ex}{0.6ex}
-  - \setlength{\parskip}{0pt}
-  - \setlength{\parindent}{0pt}
-  - \renewcommand{\baselinestretch}{0.95}
-  - \raggedbottom
+layout: project
+title: Spotted Lantern Fly Engineering Solution
+description: 60 Hz Frequency-Based Spotted Lanternfly Deterrent
+technologies: [Fusion 360, Arduino, Bambu]
+image: /assets/images/HertzTrap_Figure.png
 ---
+
+## Table of Contents
+
+- [Client Pitch](#client-pitch)
+- [Functional Prototype](#functional-prototype)
+
+## Client Pitch {#client-pitch}
 
 # HertzTrap: Frequency-Based Spotted Lanternfly Deterrent
 
@@ -83,13 +82,49 @@ SLF infestations prevent farms from passing health code inspections, forcing the
 - Spotted Lanternfly Information - https://cals.cornell.edu/integrated-pest-management/outreach-education/whats-bugging-you/spotted-lanternfly/spotted-lanternfly-damage
 - 60 Hz Research - https://www.usda.gov/about-usda/news/blog/spotted-lanternfly-reveals-potential-weakness
 
+## Functional Prototype {#functional-prototype}
 
+### Purpose of the Prototype
 
+The functional prototype was built to test whether the HertzTrap design could physically support its intended use as a vineyard-deployable spotted lanternfly deterrent. The team focused on three main goals: protecting and housing the electronics, confirming that the box had enough internal space for all planned components, and checking whether the structure could withstand drops and vertical loads likely to occur during handling and outdoor use. The prototype includes an upper electrical box, lid, copper mesh, legs, Arduino Nano, shocker PCB, battery box, speaker, amplifier, and power switch.
 
-## Figure
+### What Was Tested
 
+The prototype was assembled by placing the electrical components inside the upper box, securing them temporarily, mounting the cover with screws, attaching the mesh to the center structure, and gluing on the temporary legs.
 
-![HertzTrap schematic](assets/images/HertzTrap_Figure.png){ width=0.8\textwidth }
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
 
+  <img src="{{ '/assets/images/Step1.png' | relative_url }}" style="width:100%;">
+  <img src="{{ '/assets/images/Step2.png' | relative_url }}" style="width:100%;">
+  <img src="{{ '/assets/images/Step3.png' | relative_url }}" style="width:100%;">
 
+  <img src="{{ '/assets/images/Step4.png' | relative_url }}" style="width:100%;">
+  <img src="{{ '/assets/images/Step5.png' | relative_url }}" style="width:100%;">
+  <img src="{{ '/assets/images/Step6.png' | relative_url }}" style="width:100%;">
 
+</div>
+
+Three main tests were then performed:
+
+#### 1. Drop Test
+The trap was dropped legs-up onto grass from heights of 1 foot, 2 feet, and 4 feet to evaluate how well the upper box protected the electronics and whether the overall structure remained intact.
+
+![Drop Test]({{ "/assets/images/DropTest.png" | relative_url }}){: style="width: 500px"}
+
+#### 2. Box Capacity and Electrical Component Fit
+The team checked whether the upper electrical box had enough space for the speaker, Arduino Nano, zapper PCB, battery case, and possible future upgrades such as a larger battery or added circuitry.
+
+#### 3. Strength / Sturdiness Test
+Weights were added incrementally to the upper lid to determine how much load the prototype could support before buckling, breaking, or tipping. This test focused especially on the temporary legs and the upper box structure.
+
+![Weight Test]({{ "/assets/images/WeightTest.png" | relative_url }}){: style="width: 500px"}
+
+### Outcome
+
+The prototype performed well in the drop tests. At 1 foot, there was no visible damage and the device remained unchanged. At 2 feet, the box tipped over on impact but still showed no visible damage, and the internal components stayed protected. At 4 feet, the temporary legs became unstable and shifted, but they did not break off, and the electronics remained attached inside the box. This showed that the upper box itself was durable, while the legs need reinforcement in the next version.
+
+The box capacity test also gave strong results. The internal box volume was estimated at 96 cubic inches, while the planned electronics occupied only about 10 square inches of area and remained under the 1.5-inch height constraint. This showed that the current design has enough room for all planned electronics and leaves additional space for upgrades or airflow improvements. 
+
+In the strength test, the prototype remained stable under 544 g, 1095 g, and 1654 g. At 2195 g, the box began to tip and the temporary legs showed visible stress. Even so, the prototype demonstrated that it could comfortably handle loads greater than grapevine debris and small animals, which the team estimated at roughly 200–500 g. This suggests that the design is promising, but that the final version should use stronger legs and reinforced joints for long-term durability in field conditions.
+
+### Success Criteria Going Forward
