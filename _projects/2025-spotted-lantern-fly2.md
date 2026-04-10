@@ -1,0 +1,48 @@
+---
+layout: project
+title: Spotted Lantern Fly Engineering Solution
+description: 60 Hz Frequency-Based Spotted Lanternfly Deterrent
+technologies: [Fusion 360, Arduino, Bambu]
+image: /assets/images/HertzTrap_Figure.png
+---
+
+
+In October 2025, as part of a homework assigment for a statics course, I had to design a lever arm mechanism to lift the highest possible weight and to raise it to the highest possible height. The 2D design space was 150cm long by 50cm high.
+<br>
+<br>
+<br>
+<br>
+
+### Choosing the Actuator     
+
+I had to choose from a catalog of online actuators. Since I wanted to maximize the weight lifted, chose the actuator which could provide the greatest force output. I chose from the [Tolomatic Online Catalog](https://www.tolomatic.com/wp-content/uploads/2022/05/2700-4000_29_IMA_cat.pdf). I chose the RSX Electric Rod Style Actuator, which provided a really great force output of 294kN.
+
+### Mathematical Model
+![Pre Diagram of the Design]({{ "/assets/images/math_model_diagram.jpg" | relative_url }}){: style="width: 500px"}
+
+Let bar length be L, angle θ above horizontal, and load W at the tip.  
+The actuator attaches to the bar at distance a from the pivot, making angle α  
+relative to the bar (angle between actuator’s line of action and bar).
+
+Doing an equilibrium anaylsis yields the following equations and relationships:
+
+![Mathematical Model of the Design]({{ "/assets/images/math_model.jpg" | relative_url }}){: style="width: 500px"}
+
+### Finalizing the Design
+
+To finalize:
+
+* I decided that the max height lifted would be the height of the design space (so 50cm!).
+* The actuator would be at 90 degrees to the ground.
+* The max weight could be supported when the actuator was at 150cm from the start.
+    * The max weight was 294kN.
+    * This was equal to the force the actuator could provide.
+
+### Assuming the bar is not rigid
+
+![Mathematical Model of the Design]({{ "/assets/images/page1.jpeg" | relative_url }}){: style="width: 500px"}
+![Mathematical Model of the Design]({{ "/assets/images/page2.jpeg" | relative_url }}){: style="width: 500px"}
+![Mathematical Model of the Design]({{ "/assets/images/page3.jpeg" | relative_url }}){: style="width: 500px"}
+![Mathematical Model of the Design]({{ "/assets/images/page4.jpeg" | relative_url }}){: style="width: 500px"}
+
+![Finalized Design]({{ "/assets/images/finalized_design.jpeg" | relative_url }}){: style="width: 500px"}
